@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>SecurityPack.PageTypeSecurityAddOn</id>
+    <version>1.0.0</version>
+    <authors>SecurityPack Project, David Knipe</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Allows administrators to specifiy Read and Change access to page types in EPiServer</description>
+    <projectUrl>http://securitypack.codeplex.com/</projectUrl>
+    <tags>CMS6R2RTM</tags>
+  </metadata>
+  <files>
+    <file src="install\bin\*.dll" target="lib" />
+  </files>
+</package>
