@@ -24,7 +24,7 @@ namespace SecurityPack.PageTypeSecurityAddOn.InitModules
             HttpContext context = ((HttpApplication)sender).Context;
 
             //Only try this if users are logged in and we have a handler
-            if (HttpContext.Current.User.Identity.IsAuthenticated && context.Handler != null)
+            if (context.Handler != null)
             {
                 //Check if the request handler is of the right type (the built in or Composer page type editor)
                 string baseTypeName = context.Handler.GetType().BaseType.FullName;
