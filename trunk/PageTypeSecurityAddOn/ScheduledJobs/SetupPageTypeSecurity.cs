@@ -39,7 +39,7 @@ namespace SecurityPack.PageTypeSecurityAddOn.ScheduledJobs
                     AccessControlList update = pt.ACL.Copy();
                     foreach (var key in pt.ACL)
                     {
-                        if (key.Value.Access.HasFlag(AccessLevel.Create) && !key.Value.Access.HasFlag(AccessLevel.Edit) && key.Value.Access.HasFlag(AccessLevel.Publish))
+                        if (key.Value.Access.HasFlag(AccessLevel.Create) && !key.Value.Access.HasFlag(AccessLevel.Edit) && !key.Value.Access.HasFlag(AccessLevel.Publish))
                         {
                             update[key.Key] = new AccessControlEntry(key.Key, AccessLevel.Create | AccessLevel.Edit | AccessLevel.Publish);
                             changed = true;
