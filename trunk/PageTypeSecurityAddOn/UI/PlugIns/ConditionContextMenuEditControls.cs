@@ -25,7 +25,7 @@ namespace SecurityPack.PageTypeSecurityAddOn.UI.PlugIns
             var page = (sender as EPiServer.PageBase);
             if (page != null && page.ContextMenu != null)
             {
-                bool hasAccessToPageType = PageType.Load(page.CurrentPage.PageTypeID).ACL.QueryDistinctAccess(AccessLevel.Edit);
+                bool hasAccessToPageType = PageType.Load(page.CurrentPage.PageTypeID).ACL.QueryDistinctAccess(PrincipalInfo.CurrentPrincipal, AccessLevel.Edit);
                 if (hasAccessToPageType == false)
                 {
                     List<String> contextMenuKeys = new List<String> { "DopeEdit", "QuickEdit", "ExtEditOnPage" };

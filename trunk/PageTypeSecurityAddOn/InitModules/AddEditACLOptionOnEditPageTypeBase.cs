@@ -24,7 +24,7 @@ namespace SecurityPack.PageTypeSecurityAddOn.InitModules
             HttpContext context = ((HttpApplication)sender).Context;
 
             //Only try this if users are logged in and we have a handler
-            if (context.Handler != null)
+            if (context.Handler != null && context.User != null && context.User.Identity != null && context.User.Identity.IsAuthenticated)
             {
                 //Check if the request handler is of the right type (the built in or Composer page type editor)
                 string baseTypeName = context.Handler.GetType().BaseType.FullName;
@@ -47,7 +47,7 @@ namespace SecurityPack.PageTypeSecurityAddOn.InitModules
                 if (accessObj != null)
                 {
                     MembershipAccessLevel access = (MembershipAccessLevel)accessObj;
-                    access.AccessLevelValues = new AccessLevel[] { AccessLevel.Create, AccessLevel.Edit };
+                    access.AccessLevelValues = new AccessLevel[] { AccessLevel.Create, AccessLevel.Edit, AccessLevel.Publish };
                 }
             }
         }
