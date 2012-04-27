@@ -6,6 +6,7 @@ using EPiServer.DataAbstraction;
 using EPiServer.PlugIn;
 using EPiServer.UI.Edit;
 using EPiServer.UI.WebControls;
+using EPiServer.Security;
 
 namespace SecurityPack.PageTypeSecurityAddOn.UI.PlugIns
 {
@@ -49,7 +50,7 @@ namespace SecurityPack.PageTypeSecurityAddOn.UI.PlugIns
                     {
                         //Check if the current user has access to this page type 
                         PageType pageType = PageType.Load((HttpContext.Current.Handler as EditPanel).CurrentPage.PageTypeID);
-                        if (pageType.ACL.QueryDistinctAccess(EPiServer.Security.AccessLevel.Edit) == false)
+                        if (pageType.ACL.QueryDistinctAccess(PrincipalInfo.CurrentPrincipal, EPiServer.Security.AccessLevel.Edit) == false)
                         {
                             actionTab.Enabled = false;
                             editTabFound = true;
