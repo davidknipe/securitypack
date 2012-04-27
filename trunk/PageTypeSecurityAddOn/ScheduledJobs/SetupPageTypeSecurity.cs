@@ -8,7 +8,7 @@ using EPiServer.BaseLibrary.Scheduling;
 
 namespace SecurityPack.PageTypeSecurityAddOn.ScheduledJobs
 {
-    [ScheduledPlugIn(DisplayName = "SecurityPack : Page type security set up", Description = "Adds Change access to all page types that currently have Read access", SortIndex = 9000)]
+    [ScheduledPlugIn(DisplayName = "SecurityPack : Page type security set up", Description = "Adds Change and Publish access to all page types that currently have Read access<hr/><strong>WARNING!</strong> This job may affect existing page security settings. It is intended to be used as a one off when first installing SecurityPack.PageTypeSecurityAddOn<hr/>", SortIndex = 9000)]
     public class SetupPageTypeSecurity : JobBase
     {
         private bool stopped = false;
