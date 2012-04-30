@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageTypeSecurityAddOn", "PageTypeSecurityAddOn\PageTypeSecurityAddOn.csproj", "{F113D54C-B2BE-4CA2-AA29-3F60FBA9326C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageSecurityAddOn", "LanguageSecurityAddOn\LanguageSecurityAddOn.csproj", "{8B25687A-5B73-4322-8C80-77C1DC2A2577}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{F113D54C-B2BE-4CA2-AA29-3F60FBA9326C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F113D54C-B2BE-4CA2-AA29-3F60FBA9326C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F113D54C-B2BE-4CA2-AA29-3F60FBA9326C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B25687A-5B73-4322-8C80-77C1DC2A2577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B25687A-5B73-4322-8C80-77C1DC2A2577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B25687A-5B73-4322-8C80-77C1DC2A2577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B25687A-5B73-4322-8C80-77C1DC2A2577}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
